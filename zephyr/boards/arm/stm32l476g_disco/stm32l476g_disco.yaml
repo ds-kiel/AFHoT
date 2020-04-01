@@ -1,0 +1,13 @@
+identifier: stm32l476g_disco
+name: STM32L476GDISCOVERY
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 96
+flash: 1024
+supported:
+  - gpio
+  - counter

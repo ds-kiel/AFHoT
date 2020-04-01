@@ -1,0 +1,66 @@
+/*
+ * Copyright (c) 2018-2019 PHYTEC Messtechnik GmbH
+ * Copyright (c) 2017 Linaro Limited
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+#include <nordic/nrf52840_qiaa.dtsi>
+#include "reel_board.dtsi"
+
+/ {
+	model = "reel board";
+	compatible = "phytec,reel_board", "nordic,nrf52840-qiaa",
+		     "nordic,nrf52840";
+
+	chosen {
+		zephyr,console = &uart0;
+		zephyr,shell-uart = &uart0;
+		zephyr,uart-mcumgr = &uart0;
+		zephyr,bt-mon-uart = &uart0;
+		zephyr,bt-c2h-uart = &uart0;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,code-partition = &slot0_partition;
+	};
+};
+
+&spi1 {
+	compatible = "nordic,nrf-spi";
+	status = "okay";
+	sck-pin = <19>;
+	mosi-pin = <20>;
+	miso-pin = <21>;
+	cs-gpios = <&gpio0 17 0>;
+
+	ssd16xxfb@0 {
+		compatible = "solomon,ssd16xxfb", "gooddisplay,gdeh0213b1";
+		label = "SSD16XX";
+		spi-max-frequency = <4000000>;
+		reg = <0>;
+		width = <250>;
+		height = <120>;
+		pp-width-bits = <8>;
+		pp-height-bits = <8>;
+		reset-gpios = <&gpio0 15 0>;
+		dc-gpios = <&gpio0 16 0>;
+		busy-gpios = <&gpio0 14 0>;
+		gdv = [10 0a];
+		sdv = [19];
+		vcom = <0xa8>;
+		border-waveform = <0x71>;
+		lut-initial = [
+			22 55 AA 55 AA 55 AA 11
+			00 00 00 00 00 00 00 00
+			1E 1E 1E 1E 1E 1E 1E 1E
+			01 00 00 00 00
+		];
+		lut-default = [
+			18 00 00 00 00 00 00 00
+			00 00 00 00 00 00 00 00
+			0F 01 00 00 00 00 00 00
+			00 00 00 00 00
+		];
+	};
+};

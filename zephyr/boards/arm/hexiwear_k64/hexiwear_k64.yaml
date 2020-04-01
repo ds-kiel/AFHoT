@@ -1,0 +1,17 @@
+identifier: hexiwear_k64
+name: Hexiwear
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - ble
+  - adc
+  - gpio
+  - hwinfo
+  - i2c
+  - spi
+  - pwm
+  - watchdog

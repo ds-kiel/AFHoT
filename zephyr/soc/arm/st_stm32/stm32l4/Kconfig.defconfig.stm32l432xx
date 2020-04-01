@@ -1,0 +1,24 @@
+# Kconfig - ST Microelectronics STM32L432XX MCU
+#
+# Copyright (c) 2016 Open-RnD Sp. z o.o.
+# Copyright (c) 2016 BayLibre, SAS
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if SOC_STM32L432XX
+
+config SOC
+	default "stm32l432xx"
+
+config NUM_IRQS
+	default 83
+
+if GPIO_STM32
+
+config GPIO_STM32_PORTH
+	default y
+
+endif # GPIO_STM32
+
+endif # SOC_STM32L432XX

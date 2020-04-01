@@ -1,0 +1,38 @@
+#
+# Copyright (c) 2018 Savoir-Faire Linux.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+
+menuconfig SPI_NOR
+	bool "SPI NOR Flash"
+	select FLASH_HAS_DRIVER_ENABLED
+	depends on SPI
+
+if SPI_NOR
+
+config SPI_NOR_INIT_PRIORITY
+	int
+	default 80
+	help
+	  Device driver initialization priority.
+	  Device is connected to SPI bus, it has to
+	  be initialized after SPI driver.
+
+config SPI_NOR_CS_WAIT_DELAY
+	int "Delay time in us"
+	default 0
+	help
+	This is the wait delay (in us) to allow for CS switching to take effect
+
+config SPI_NOR_FLASH_LAYOUT_PAGE_SIZE
+	int "Page size to use for FLASH_LAYOUT feature"
+	default 65536
+	help
+	  When CONFIG_FLASH_PAGE_LAYOUT is used this driver will support
+	  that API.  By default the page size corresponds to the block
+	  size (65536).  Other options include the 32K-byte erase size
+	  (32768), and the sector size (4096).
+
+endif # SPI_NOR

@@ -1,0 +1,10 @@
+--inline-logs
+--build-only
+--tag
+footprint
+-p
+frdm_k64f
+-p
+nrf51_pca10028
+-p
+nrf52_pca10040

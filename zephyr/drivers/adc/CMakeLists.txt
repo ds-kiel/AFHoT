@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: Apache-2.0
+
+zephyr_library()
+
+zephyr_library_sources_ifdef(CONFIG_ADC_SHELL		adc_shell.c)
+zephyr_library_sources_ifdef(CONFIG_ADC_MCUX_ADC12	adc_mcux_adc12.c)
+zephyr_library_sources_ifdef(CONFIG_ADC_MCUX_ADC16	adc_mcux_adc16.c)
+zephyr_library_sources_ifdef(CONFIG_ADC_SAM_AFEC	adc_sam_afec.c)
+zephyr_library_sources_ifdef(CONFIG_ADC_NRFX_ADC	adc_nrfx_adc.c)
+zephyr_library_sources_ifdef(CONFIG_ADC_NRFX_SAADC	adc_nrfx_saadc.c)
+zephyr_library_sources_ifdef(CONFIG_ADC_SAM0		adc_sam0.c)
+zephyr_library_sources_ifdef(CONFIG_ADC_STM32		adc_stm32.c)
+zephyr_library_sources_ifdef(CONFIG_ADC_XEC		adc_mchp_xec.c)
+zephyr_library_sources_ifdef(CONFIG_USERSPACE		adc_handlers.c)

@@ -1,0 +1,86 @@
+# Kconfig - Microchip MEC1501HSZ MCU
+#
+# Copyright (c) 2018 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if SOC_MEC1501_HSZ
+
+config SOC
+	default "mec1501hsz"
+
+if SERIAL
+
+config UART_NS16550
+	default y
+
+endif # SERIAL
+
+if PINMUX
+
+config PINMUX_XEC
+	default y
+
+endif # PINMUX
+
+config GPIO
+	default y
+
+if ADC
+
+config ADC_XEC
+	default y
+
+endif # ADC
+
+if GPIO
+
+config GPIO_XEC
+	default y
+
+endif # GPIO
+
+if I2C
+
+config I2C_XEC
+	default y
+
+endif # I2C
+
+if COUNTER
+
+config COUNTER_XEC
+	default y
+
+endif # COUNTER
+
+if PS2
+
+config PS2_XEC
+	default y
+
+endif # PS2
+
+if PWM
+
+config PWM_XEC
+	default y
+
+endif # PWM
+
+if KSCAN
+
+config KSCAN_XEC
+	default y
+
+endif # KSCAN
+
+if SPI
+
+config SPI_XEC_QMSPI
+	default y
+
+endif # SPI
+
+endif # SOC_MEC1501_HSZ

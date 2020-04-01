@@ -1,0 +1,1 @@
+zephyr_include_directories_ifdef(CONFIG_TRACING_CTF ctf)

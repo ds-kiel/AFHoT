@@ -1,0 +1,16 @@
+# Copyright (c) 2018, NXP
+# SPDX-License-Identifier: Apache-2.0
+
+title: ADXL362 Three Axis SPI accelerometer
+
+description: |
+    This is a representation of the ADXL362 Three Axis SPI accelerometer
+
+compatible: "adi,adxl362"
+
+include: spi-device.yaml
+
+properties:
+    int1-gpios:
+      type: phandle-array
+      required: false

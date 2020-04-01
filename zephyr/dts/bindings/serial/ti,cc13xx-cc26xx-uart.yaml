@@ -1,0 +1,28 @@
+# Copyright (c) 2019 Brett Witherspoon
+# SPDX-License-Identifier: Apache-2.0
+
+title: TI SimpleLink CC13xx / CC26xx UART
+
+description: |
+    This is a representation of the TI SimpleLink CC13xx / CC26xx UART node
+
+compatible: "ti,cc13xx-cc26xx-uart"
+
+include: uart-controller.yaml
+
+properties:
+    reg:
+      required: true
+
+    interrupts:
+      required: true
+
+    tx-pin:
+      type: int
+      required: true
+      description: TX pin
+
+    rx-pin:
+      type: int
+      required: true
+      description: RX pin

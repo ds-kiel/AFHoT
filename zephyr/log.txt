@@ -1,0 +1,26 @@
+Script started on Tue Mar 17 13:23:00 2020
+command: screen /dev/tty.usbmodem0006831091731 115200 -L
+^D[?1049h[!p[?3;4l[4l>[4l[?1h=[0m(B[1;24r[H[2J[H[2JBluetooth initialized
+Before bt enabled
+After bt enabled
+I am central!
+ee:96:32:de:da:e9 (random)
+Bluetooth initialized
+Scanning successfully started
+Starting data parse
+[AD]: 1 data_len 1
+Connected
+Connected: cc:99:41:e9:ea:72 (random)
+Before exchange
+280028032a0529022803[00:00:10.004,821] <inf> bt_hci_core: HW Platform: Nordic Semiconductor (0x0002)
+[00:00:10.004,821] <inf> bt_hci_core: HW Variant: nRF52x (0x0002)
+[00:00:10.004,821] <inf> bt_hci_core: Firmware: Standard Bluetooth controller (0x00) Version 2.0 Build 99
+[00:00:10.005,523] <inf> bt_hci_core: Identity: ee:96:32:de:da:e9 (random)
+[00:00:10.005,554] <inf> bt_hci_core: HCI: version 5.1 (0x0a) revision 0x0000, manufacturer 0x05f1
+[00:00:10.005,554] <inf> bt_hci_core: LMP: version 5.1 (0x0a) subver 0xffff
+[00:00:10.019,226] <dbg> bt_ctlr_llsw_nordic_lll_filter.rpa_refresh_start: 
+[00:00:10.045,989] <dbg> bt_ctlr_llsw_nordic_lll_filter.rpa_refresh_start: 
+[00:00:10.047,485] <dbExchange done
+g> bt_ctlr_llsw_nordic_lll_filter.rpa_refresh_start: 
+[00:00:10.154,296] <inf> bt_ctlr_hci: handle: 0x0000, rssi: -53 dB.
+2b2928032b2a280028032a0028032a0128032a04280028032a2b290228002902280312345678-1234-5678-1234-56789abcdef32900280312345678-1234-5678-1234-56789abcdef4Discover complete

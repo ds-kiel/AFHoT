@@ -1,0 +1,14 @@
+# Copyright (c) 2018, Linaro Limited
+# SPDX-License-Identifier: Apache-2.0
+
+# Common fields for Ethernet devices
+
+include: base.yaml
+
+properties:
+    local-mac-address:
+      type: uint8-array
+      required: false
+      description: mac address
+    label:
+      required: true

@@ -1,0 +1,21 @@
+# Kconfig.sx1509b - SX1509B GPIO configuration options
+#
+#
+# Copyright (c) 2018 Aapo Vienamo
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+menuconfig GPIO_SX1509B
+	bool "SX1509B I2C GPIO chip"
+	depends on I2C
+	select HAS_DTS_GPIO
+	help
+	  Enable driver for SX1509B I2C GPIO chip.
+
+config GPIO_SX1509B_INIT_PRIORITY
+	int "Init priority"
+	depends on GPIO_SX1509B
+	default 70
+	help
+	  Device driver initialization priority.

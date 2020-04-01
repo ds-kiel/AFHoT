@@ -1,0 +1,5 @@
+tests:
+  peripheral.pwm:
+    tags: drivers pwm
+    filter: DT_ALIAS_PWM_0_LABEL or DT_ALIAS_PWM_1_LABEL or DT_ALIAS_PWM_2_LABEL or DT_ALIAS_PWM_3_LABEL
+    depends_on: pwm

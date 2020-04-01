@@ -1,0 +1,4 @@
+tests:
+  kernel.pending:
+    min_ram: 16
+    tags: kernel

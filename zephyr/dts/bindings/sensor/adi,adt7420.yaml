@@ -1,0 +1,16 @@
+# Copyright (c) 2018 Analog Devices Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+title: ADT7420 16-Bit Digital I2C Temperature Sensor
+
+description: |
+    This is a representation of the ADT7420 16-Bit Digital I2C Temperature Sensor
+
+compatible: "adi,adt7420"
+
+include: i2c-device.yaml
+
+properties:
+    int-gpios:
+      type: phandle-array
+      required: false

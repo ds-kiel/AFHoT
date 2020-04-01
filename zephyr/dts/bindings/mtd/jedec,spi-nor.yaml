@@ -1,0 +1,40 @@
+# Copyright (c) 2018 Peter Bigot Consulting, LLC
+# SPDX-License-Identifier: Apache-2.0
+
+title: SPI NOR flash devices (JEDEC CFI interface)
+
+description: |
+  Any SPI NOR flash that supports the JEDEC CFI interface.
+
+compatible: "jedec,spi-nor"
+
+include: spi-device.yaml
+
+properties:
+  jedec-id:
+    type: uint8-array
+    required: true
+    description: JEDEC ID as manufacturer ID, memory type, memory density
+
+  has-be32k:
+    type: boolean
+    required: false
+    description: Indicates the device supports the BE32K command
+
+  size:
+    type: int
+    required: false
+    description: flash capacity in bits
+
+  wp-gpios:
+    type: phandle-array
+    required: false
+    description: WPn pin
+  hold-gpios:
+    type: phandle-array
+    required: false
+    description: HOLDn pin
+  reset-gpios:
+    type: phandle-array
+    required: false
+    description: RESETn pin

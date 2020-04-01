@@ -1,0 +1,18 @@
+title: Kinetis UART
+
+description: |
+    This binding gives a base representation of the Kinetis UART
+
+compatible: "nxp,kinetis-uart"
+
+include: uart-controller.yaml
+
+properties:
+    reg:
+      required: true
+
+    interrupts:
+      required: true
+
+    clocks:
+      required: true

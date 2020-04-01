@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: Apache-2.0
+
+title: simulated flash
+
+description: |
+    This binding gives a base representation of a simulated flash memory
+
+compatible: "zephyr,sim-flash"
+
+include: base.yaml
+
+properties:
+    label:
+      required: true

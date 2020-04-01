@@ -1,0 +1,4 @@
+tests:
+  peripheral.mailbox:
+    arch_exclude: posix xtensa
+    tags: drivers ipc

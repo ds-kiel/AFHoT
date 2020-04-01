@@ -1,0 +1,12 @@
+identifier: nrf52810_pca10040
+name: nRF52810-PCA10040
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - counter
+ram: 24
+flash: 192

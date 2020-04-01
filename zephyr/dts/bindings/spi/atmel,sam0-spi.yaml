@@ -1,0 +1,35 @@
+# Copyright (c) 2018, Google LLC.
+# SPDX-License-Identifier: Apache-2.0
+
+title: Atmel SAM0 SERCOM SPI driver
+
+description: |
+    This binding gives a base representation of the Atmel SAM0 SERCOM SPI controller
+
+compatible: "atmel,sam0-spi"
+
+include: spi-controller.yaml
+
+properties:
+    reg:
+      required: true
+
+    dipo:
+      type: int
+      required: true
+      description: Data In Pinout
+
+    dopo:
+      type: int
+      required: true
+      description: Data Out Pinout
+
+    rxdma:
+      type: int
+      required: false
+      description: Receive DMA channel
+
+    txdma:
+      type: int
+      required: false
+      description: Transmit DMA channel

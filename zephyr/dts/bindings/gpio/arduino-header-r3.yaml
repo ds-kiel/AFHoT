@@ -1,0 +1,11 @@
+# Copyright (c) 2019 Foundries.io
+# SPDX-License-Identifier: Apache-2.0
+
+title: ARDUINO GPIO HEADER
+
+description: |
+    This is a representation of GPIO pin nodes exposed as headers on Arduino R3
+
+compatible: "arduino-header-r3"
+
+include: [gpio-nexus.yaml, base.yaml]

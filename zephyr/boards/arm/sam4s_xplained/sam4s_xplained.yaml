@@ -1,0 +1,11 @@
+identifier: sam4s_xplained
+name: SAM4S Xplained
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - gpio
+  - watchdog
