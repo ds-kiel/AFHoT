@@ -1,3 +1,8 @@
+# Important!
+
+A new version has been published. Please viti [ds-kiel/eAFH](https://github.com/ds-kiel/eAFH) for our latest work on channel management for Bluetooth Low Energy.
+
+
 # AFHoT
 AFHoT - an open source AFH implementation for Zephyr's Bluetooth Low Energy stack
 
